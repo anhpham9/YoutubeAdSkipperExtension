@@ -1,0 +1,1 @@
+console.log("YouTube Ad Skipper extension loaded");

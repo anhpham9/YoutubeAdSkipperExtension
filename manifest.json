@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Ad Skipper",
+    "version": "1.0",
+    "description": "Tự động bỏ qua quảng cáo trên YouTube.",
+    "permissions": [
+        "scripting",
+        "tabs"
+    ],
+    "host_permissions": [
+        "*://www.youtube.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://www.youtube.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_title": "YouTube Ad Skipper"
+    },
+    "icons": {
+        "256": "icon.png"
+    }
+}
